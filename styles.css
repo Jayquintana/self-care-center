@@ -6,7 +6,26 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000; */
 
-.selfcare
-{color: #78a7c6;
+.self-care{
+  color: #ffffff;
   text-align: center;
+    ont-family: 'Quicksand';
+}
+
+.type-of-message{
+  color:#ffffff;
+  font-family: 'Quicksand';
+  text-align: center;
+}
+
+.choose-message{
+  width: 320px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 0;
+  align-content: center;
+}
+body{
+  background-image: linear-gradient(180deg,#134d71, #78a7c6, #f7e4bf );
+  height: 100vh;
 }
