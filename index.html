@@ -3,25 +3,31 @@
   <head>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
     <header>
       <h1 class = "self-care">✨Self Care Center✨</h1>
     </header>
+  </head>
+  <body>
     <div class = "type-of-message">
       <h3>Which Type of Message?</h3>
     </div>
     <section class = "choose-message">
-      <form>
-        <input class = "affirmations-click" type="radio" value = "affirmations" > affirmation
-        <input class = "mantras-click" type="radio" value = "mantras" >mantras
+      <div class="message-option">
+        <form>
+          <input class="aff" type="radio" name = "affirmations">
+          <label for="affirmations">affirmation</label>
+          <input class="man" type="radio" name = "mantras" >
+          <label for="mantras">mantra</label>
       </form>
-      <button class = "message-button"> Rececive Message </button>
+      </div>
+      <button class = "recive-message-button"> Rececive Message </button>
     </section>
-    <section class = "recive-message">
-      <p> </p>
+    <section class="message-display">
+      <div class="display-message">
+        <img class="zen-guy" src="assets/meditate.svg" alt="">
+        <p></p>
+      </div>
     </section>
     <script type="text/javascript" src="main.js"></script>
-
   </body>
 </html>
