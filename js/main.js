@@ -3,11 +3,13 @@
 //recive button
 var buttonReciveMessage = document.querySelector('.recive-message-button');
 //dusplay div for image
-var messageImage = document.querySelector('.message-display')
+var img = document.querySelector('.zen-guy')
 //affirmation radio button
 var affirmationSelection = document.querySelector('#affirm');
 //mantra radio button
 var mantraSelection = document.querySelector('#mantra')
+//display message
+var displayMessage = document.querySelector('.display-message')
 
 
 
@@ -16,7 +18,7 @@ var mantraSelection = document.querySelector('#mantra')
 var affirmations = [
 'I forgive myself and set myself free',
 'I believe I can be all that I want to be.',
-'I am in the process of becoming the best version of myself.'
+'I am in the process of becoming the best version of myself.',
 'I have the freedom & power to create the life I desire',
 'I choose to be kind to myself and love myself unconditionally.',
 'My possibilities are endless.',
@@ -47,7 +49,7 @@ var mantras = [
 
 
 // eventlisteners
-
+buttonReciveMessage.addEventListener('click', callButton);
 
 
 
@@ -57,4 +59,27 @@ var mantras = [
 
 function makeRandomMessage (array){
  return Math.floor(Math.random() * array.length);
+}
+
+function affirmationMessage(){
+img.classList.add('hidden');
+displayMessage.innerText = affirmations[makeRandomMessage (affirmations)];
+}
+
+function mantraMessage(){
+  img.classList.add('hidden');
+  displayMessage.innerText = mantras[makeRandomMessage (mantras)];
+}
+
+function affirmationChecked(){
+  if(affirmationSelection.checked){
+    affirmationMessage();
+  } else if(mantraSelection.checked){
+    mantraMessage();
+
+  }
+}
+
+function callButton(){
+  affirmationChecked();
 }
