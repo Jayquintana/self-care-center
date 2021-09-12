@@ -12,20 +12,20 @@
       <h3>Which Type of Message?</h3>
     </div>
     <section class = "choose-message">
-      <div class="message-option">
-        <form>
-          <input class="aff" type="radio" name = "affirmations">
-          <label for="affirmations">affirmation</label>
-          <input class="man" type="radio" name = "mantras" >
-          <label for="mantras">mantra</label>
-        </form>
+      <div class="align-affirmation">
+        <input type="radio" name = "message-selection">
+        <label id="affirm"for="affirmations">affirmation</label>
       </div>
-      <button class = "recive-message-button"> Rececive Message </button>
+      <div class="align-mantra">
+        <input type="radio" name = "message-selection" >
+        <label id="mantra"for="mantras">mantra</label>
+      </div>
+    <button class="recive-message-button"> Rececive Message </button>
     </section>
     <section class="message-display">
       <div class="display-message">
-        <img class="zen-guy" src="assets/meditate.svg" alt="">
-        <p></p>
+        <img class="zen-guy" id="img" src="assets/meditate.svg" alt="">
+        <p class="display-message"></p>
       </div>
     </section>
     <script type="text/javascript" src="main.js"></script>

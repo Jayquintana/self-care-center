@@ -9,23 +9,37 @@ body{
   background-image: linear-gradient(180deg,#134d71, #78a7c6, #f7e4bf );
   height: 100vh;
 }
-
+button:hover {
+  background: darkslateblue;
+}
+/* self care title / type of message */
 .self-care,
 .type-of-message{
   color: #ffffff;
   text-align: center;
   font-family: 'Quicksand';
 }
+/* choose message section w/ options and message button */
 .choose-message{
   font-family: 'Quicksand';
   text-align: center;
-  width: 450px;
-  padding: 15px;
+  width: 500px;
+  padding: 2%;
   border-radius: 8px;
   align-content: right;
   background-color: white;
   margin:auto;
   margin-top: 80px;
+}
+
+.align-affirmation {
+  margin-right: 50%;
+
+}
+.align-mantra{
+  margin-left: 50%;
+  margin-top: -4%;
+
 }
 
 .recive-message-button{
@@ -39,20 +53,19 @@ body{
   background-color: #134d71;
 }
 
+
+
+/* display recived message section */
+
 .zen-guy{
   width: 70px;
-  animation: fadeIn ease 10s;
-  -webkit-animation: fadeIn ease 10s;
-  -moz-animation: fadeIn ease 10s;
-  -o-animation: fadeIn ease 10s;
-  -ms-animation: fadeIn ease 10s;
 
 }
 
 
 .message-display{
   width: 50%;
-  padding: 5px;
+  padding: 30px;
   border-radius: 8px;
   border: none;
   color: black;
@@ -63,4 +76,7 @@ body{
 
 .display-message{
   text-align: center;
+}
+.hidden {
+  display: none!important;
 }
