@@ -7,10 +7,11 @@ var img = document.querySelector('.zen-guy')
 //affirmation radio button
 var affirmationSelection = document.querySelector('#affirm');
 //mantra radio button
-var mantraSelection = document.querySelector('#mantra')
+var mantraSelection = document.querySelector('#mantra');
 //display message
-var displayMessage = document.querySelector('.display-message')
-
+var displayMessage = document.querySelector('.display-message-input');
+// clear message
+var clearMessageButton = document.querySelector('.clear');
 
 
 
@@ -48,9 +49,11 @@ var mantras = [
   'I am the sky, the rest is weather.'];
 
 
-// eventlisteners
+// eventlisteners;
+
 buttonReciveMessage.addEventListener('click', callButton);
 
+clearMessageButton.addEventListener('click', clearMessage);
 
 
 
@@ -74,12 +77,24 @@ function mantraMessage(){
 function affirmationChecked(){
   if(affirmationSelection.checked){
     affirmationMessage();
+    clearMessageButton.classList.remove('hidden');
   } else if(mantraSelection.checked){
     mantraMessage();
-
+    clearMessageButton.classList.remove('hidden');
   }
+
 }
+
+function clearMessage(){
+  displayMessage.innerText  = '';
+  clearMessageButton.classList.add('hidden');
+  img.classList.remove('hidden');
+}
+
+
+
 
 function callButton(){
   affirmationChecked();
+
 }
